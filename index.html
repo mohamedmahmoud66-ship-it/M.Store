@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>M.Store - نظام إدارة مصنع </title>
+    <style>
+        body { margin: 0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #f4f7f6; }
+        .hero { background: #2c3e50; color: white; padding: 40px 20px; text-align: center; }
+        .reports-container { direction: rtl; padding: 40px 20px; max-width: 1200px; margin: auto; }
+        .dashboard-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; margin-top: 20px; }
+        .card { padding: 30px; border-radius: 15px; color: white; box-shadow: 0 10px 20px rgba(0,0,0,0.1); text-align: center; transition: transform 0.3s; }
+        .card:hover { transform: translateY(-10px); }
+        .card h3 { margin-top: 0; font-size: 1.2rem; opacity: 0.9; }
+        .card .amount { font-size: 2.5rem; font-weight: bold; margin: 15px 0; }
+        .bg-blue { background: linear-gradient(135deg, #3498db, #2980b9); }
+        .bg-red { background: linear-gradient(135deg, #e74c3c, #c0392b); }
+        .bg-orange { background: linear-gradient(135deg, #f39c12, #e67e22); }
+        .bg-green { background: linear-gradient(135deg, #27ae60, #2ecc71); }
+        .contact-section { text-align: center; margin-top: 50px; padding: 30px; background: white; border-radius: 15px; }
+        .cta-button { background: #2c3e50; color: white; padding: 15px 30px; text-decoration: none; border-radius: 5px; font-weight: bold; }
+    </style>
+</head>
+<body>
+
+    <div class="hero">
+        <h1>M.Store System 📦</h1>
+        <p>الحل المتكامل لإدارة حسابات ومخازن مصنع</p>
+    </div>
+
+    <div class="reports-container">
+        <h2 style="color:#2c3e50; border-bottom: 3px solid #3498db; padding-bottom: 10px; text-align: center;">📊 معاينة من داخل النظام (ملخص الأداء)</h2>
+        
+        <div class="dashboard-grid">
+            <div class="card bg-blue">
+                <h3>💰 إجمالي المبيعات</h3>
+                <div class="amount">53,340 ج.م</div>
+                <p>متابعة لحظية لكل المبيعات</p>
+            </div>
+
+            <div class="card bg-red">
+                <h3>🔴 ديون العملاء</h3>
+                <div class="amount">100- ج.م</div>
+                <p>تحصيل دقيق للمديونيات الخارجية</p>
+            </div>
+
+            <div class="card bg-orange">
+                <h3>🟠 ديون الموردين</h3>
+                <div class="amount">4,000 ج.م</div>
+                <p>تنظيم حسابات التجار والمواد الخام</p>
+            </div>
+
+            <div class="card bg-green">
+                <h3>📦 أصناف المخزن</h3>
+                <div class="amount">6 أصناف</div>
+                <p>جرد آلي وتنبيه بالنواقص</p>
+            </div>
+        </div>
+
+        <div class="contact-section">
+            <h2>هل تريد تجربة النظام في مصنعك؟</h2>
+            <p>برنامج M.Store مصمم ليوفر لك الوقت ويحمي أموالك من خلال نظام محاسبي دقيق.</p>
+            <br><br>
+            <a href="mohamed.mahmoud66@gmail.com" class="cta-button">تواصل مع المطور لطلب نسخة</a>
+        </div>
+    </div>
+
+</body>
+</html>
