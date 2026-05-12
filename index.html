@@ -1,133 +1,160 @@
 <!DOCTYPE html>
-<html lang="ar">
+<html lang="ar" dir="rtl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>M.Store - حلول البرمجيات المتكاملة والـ IT</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
-        body { margin: 0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #f4f7f6; color: #333; }
-        .hero { background: linear-gradient(rgba(44, 62, 80, 0.9), rgba(44, 62, 80, 0.9)), url('https://images.unsplash.com/photo-1510511459019-5dda7724fd87?auto=format&fit=crop&q=80&w=1000'); background-size: cover; color: white; padding: 60px 20px; text-align: center; }
-        .container { direction: rtl; padding: 40px 20px; max-width: 1200px; margin: auto; }
+        :root { --main-gold: #a6934b; --dark-blue: #2c3e50; }
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #f8f9fa; color: #333; }
         
-        /* Dashboard Section */
-        .dashboard-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; margin-top: 20px; }
-        .card { padding: 30px; border-radius: 15px; color: white; box-shadow: 0 10px 20px rgba(0,0,0,0.1); text-align: center; transition: transform 0.3s; }
-        .card:hover { transform: translateY(-10px); }
-        .card .amount { font-size: 2.2rem; font-weight: bold; margin: 15px 0; }
-        .bg-blue { background: linear-gradient(135deg, #3498db, #2980b9); }
-        .bg-red { background: linear-gradient(135deg, #e74c3c, #c0392b); }
-        .bg-orange { background: linear-gradient(135deg, #f39c12, #e67e22); }
-        .bg-green { background: linear-gradient(135deg, #27ae60, #2ecc71); }
+        /* Navbar */
+        .navbar { background-color: white; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
+        .navbar-brand img { height: 50px; }
 
-        /* Experience & Projects Section */
-        .section-title { color: #2c3e50; border-right: 5px solid #3498db; padding-right: 15px; margin-top: 60px; text-align: right; }
-        .item-box { background: white; padding: 25px; border-radius: 10px; margin-bottom: 20px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); border-right: 4px solid #3498db; }
-        .item-box h3 { margin: 0; color: #2c3e50; }
-        .item-box .tag { display: inline-block; background: #ebf5fb; color: #3498db; padding: 2px 10px; border-radius: 5px; font-size: 0.85rem; font-weight: bold; margin-bottom: 10px; }
-        .item-box .date { color: #7f8c8d; font-weight: bold; font-size: 0.9rem; float: left; }
-        .item-box ul { padding-right: 20px; margin-top: 10px; }
-        .item-box li { margin-bottom: 8px; line-height: 1.6; }
+        /* Hero Section */
+        .hero { 
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1510511459019-5dda7724fd87?auto=format&fit=crop&q=80&w=1000');
+            background-size: cover; background-position: center;
+            color: white; padding: 100px 0; text-align: center;
+        }
+        .hero img { width: 180px; margin-bottom: 20px; filter: drop-shadow(2px 4px 6px black); }
 
-        .screenshots { margin-top: 50px; text-align: center; }
-        .screenshots img { width: 100%; max-width: 800px; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.2); margin-bottom: 20px; border: 5px solid white; }
+        /* Custom Cards */
+        .card-stat { border: none; border-radius: 15px; transition: 0.3s; color: white; }
+        .card-stat:hover { transform: translateY(-10px); }
+        .bg-custom-blue { background: linear-gradient(45deg, #3498db, #2980b9); }
+        .bg-custom-red { background: linear-gradient(45deg, #e74c3c, #c0392b); }
+        .bg-custom-orange { background: linear-gradient(45deg, #f39c12, #e67e22); }
+        .bg-custom-green { background: linear-gradient(45deg, #27ae60, #2ecc71); }
+
+        .section-title { border-right: 5px solid var(--main-gold); padding-right: 15px; margin: 50px 0 30px; font-weight: bold; }
+        .item-box { background: white; padding: 25px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); margin-bottom: 25px; border-right: 5px solid var(--main-gold); }
+        .tag { background: #fcf8e3; color: #8a6d3b; padding: 4px 12px; border-radius: 20px; font-size: 0.8rem; font-weight: bold; }
         
-        .contact-section { text-align: center; margin-top: 60px; padding: 60px 40px; background: #fff; border-radius: 15px; box-shadow: 0 -5px 20px rgba(0,0,0,0.05); }
-        .cta-button { background: #2c3e50; color: white; padding: 18px 40px; text-decoration: none; border-radius: 30px; font-weight: bold; font-size: 1.3rem; display: inline-block; transition: 0.3s; }
-        .cta-button:hover { background: #3498db; transform: scale(1.05); }
+        .screenshot-img { width: 100%; border-radius: 15px; border: 8px solid white; box-shadow: 0 10px 30px rgba(0,0,0,0.1); margin-bottom: 30px; }
+        
+        .footer { background: var(--dark-blue); color: white; padding: 50px 0; margin-top: 80px; }
+        .cta-btn { background: var(--main-gold); color: white; border: none; padding: 15px 40px; border-radius: 50px; font-weight: bold; text-decoration: none; transition: 0.3s; }
+        .cta-btn:hover { background: #8e7d3a; color: white; transform: scale(1.05); }
     </style>
 </head>
 <body>
 
-    <div class="hero">
-        <h1>M.Store System 📦</h1>
-        <p style="font-size: 1.2rem; opacity: 0.9;">خبير برمجيات IT بأكثر من 25 عاماً من الخبرة في بناء الحلول الذكية</p>
-    </div>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img src="mstore5.png" alt="M.Store Logo">
+            </a>
+            <span class="fw-bold d-none d-sm-inline">M.Store Software Solutions</span>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero">
+        <div class="container">
+            <img src="mstore5.png" alt="M.Store Center Logo">
+            <h1 class="display-4 fw-bold">نظام M.Store المتكامل</h1>
+            <p class="lead">خبرة أكثر من 25 عاماً في هندسة البرمجيات والبنية التحتية الـ IT</p>
+        </div>
+    </header>
 
     <div class="container">
-        <!-- New Projects Section -->
-        <h2 class="section-title">💻 أحدث المشروعات البرمجية</h2>
-        
-        <div class="item-box">
-            <span class="tag">Web Development | ASP.NET & SQL</span>
-            <h3>نظام WareHouseDB المتكامل</h3>
-            <ul>
-                <li>تطوير نظام ERP شامل لإدارة المبيعات والمشتريات والمخازن المتعددة.</li>
-                <li>تصميم وتنفيذ موديول "شؤون العاملين" لمتابعة الرواتب والحضور والانصراف بدقة.</li>
-                <li>ضمان سلامة البيانات (Data Integrity) عبر استخدام SQL Transactions المتقدمة.</li>
-            </ul>
-        </div>
-
-        <div class="item-box">
-            <span class="tag">Mobile Development | Kotlin & Android</span>
-            <h3>تطبيق PhotoEditor الاحترافي</h3>
-            <ul>
-                <li>تطوير تطبيق Native لنظام أندرويد باستخدام لغة **Kotlin** لتحرير ومعالجة الصور.</li>
-                <li>تكامل النظام مع MediaStore لضمان حفظ وإدارة الصور بكفاءة عالية.</li>
-            </ul>
+        <!-- Projects Section -->
+        <h2 class="section-title">💻 أحدث المشروعات والتقنيات</h2>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="item-box h-100">
+                    <span class="tag mb-2 d-inline-block">Web | ASP.NET | SQL Server</span>
+                    <h3>نظام WareHouseDB</h3>
+                    <ul>
+                        <li>إدارة ERP كاملة للمصانع (مبيعات، مخازن، ديون).</li>
+                        <li>نظام شؤون العاملين المتطور لمتابعة الحضور والرواتب.</li>
+                        <li>تأمين قواعد البيانات ومعالجة العمليات المالية المعقدة.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="item-box h-100">
+                    <span class="tag mb-2 d-inline-block">Mobile | Kotlin | Android</span>
+                    <h3>تطبيق PhotoEditor</h3>
+                    <ul>
+                        <li>تطبيق Native متطور لمعالجة الصور وحفظها.</li>
+                        <li>استخدام أحدث مكتبات الأندرويد لضمان السرعة والأداء.</li>
+                    </ul>
+                </div>
+            </div>
         </div>
 
         <!-- Experience Section -->
-        <h2 class="section-title">🚀 المسيرة المهنية (Portfolio)</h2>
-        
+        <h2 class="section-title">🚀 المسيرة المهنية</h2>
         <div class="item-box">
-            <span class="date">2010 – 2022</span>
-            <h3>IT Specialist & Software Developer | Cairo Medical</h3>
-            <ul>
-                <li>تأسيس وتركيب الشبكات (Networking) وإعداد السيرفرات الخاصة بالمستشفيات والشركات.</li>
-                <li>برمجة التطبيقات اللازمة لخدمة العمل باستخدام  **C#** و **Java**.</li>
-                <li>دمج وإدارة أنظمة البصمة ZKTeco وربطها بقواعد البيانات لضبط الحضور والانصراف.</li>
-            </ul>
+            <div class="d-flex justify-content-between">
+                <h4 class="fw-bold">IT Specialist & Senior Developer | Cairo Medical</h4>
+                <span class="badge bg-secondary">2010 – 2022</span>
+            </div>
+            <p class="text-muted mt-2">مسؤول عن تأسيس الشبكات، تسطيب السيرفرات، وبرمجة الأنظمة الطبية بـ C# و Java.</p>
         </div>
 
         <div class="item-box">
-            <span class="date">2000 – 2010</span>
-            <h3>Software Programmer | Delta Computer</h3>
-            <ul>
-                <li>تطوير برامج الحسابات والمخازن المخصصة للشركات الكبرى.</li>
-                <li> انشاء برامج المبيعات و المشتريات باستخدام Visual Studio dev.</li>
-                <li>تصميم معماري لقواعد البيانات (Database Architecture) لضمان سرعة التقارير المالية.</li>
-            </ul>
+            <div class="d-flex justify-content-between">
+                <h4 class="fw-bold">Software Programmer | Delta Computer</h4>
+                <span class="badge bg-secondary">2000 – 2010</span>
+            </div>
+            <p class="text-muted mt-2">تطوير برامج المحاسبة والمبيعات باستخدام Visual Studio وقواعد بيانات SQL.</p>
         </div>
 
-        <!-- Dashboard Section -->
-        <h2 class="section-title">📊 معاينة نظام WareHouseDB</h2>
-        <div class="dashboard-grid">
-            <div class="card bg-blue">
-                <h3>💰 إجمالي المبيعات</h3>
-                <div class="amount">53,340 ج.م</div>
-                <p>متابعة لحظية لكل المبيعات</p>
+        <!-- Dashboard Preview -->
+        <h2 class="section-title text-center border-0">📊 نظرة داخل WareHouseDB</h2>
+        <div class="row g-4 mt-2">
+            <div class="col-md-3 col-sm-6">
+                <div class="card card-stat bg-custom-blue p-4 text-center">
+                    <h5>إجمالي المبيعات</h5>
+                    <div class="h2 fw-bold my-2">53,340 ج.م</div>
+                </div>
             </div>
-            <div class="card bg-red">
-                <h3>🔴 ديون العملاء</h3>
-                <div class="amount">100- ج.م</div>
-                <p>تحصيل دقيق للمديونيات الخارجية</p>
+            <div class="col-md-3 col-sm-6">
+                <div class="card card-stat bg-custom-red p-4 text-center">
+                    <h5>ديون العملاء</h5>
+                    <div class="h2 fw-bold my-2">100- ج.م</div>
+                </div>
             </div>
-            <div class="card bg-orange">
-                <h3>🟠 ديون الموردين</h3>
-                <div class="amount">4,000 ج.م</div>
-                <p>تنظيم حسابات الموردين والمواد الخام</p>
+            <div class="col-md-3 col-sm-6">
+                <div class="card card-stat bg-custom-orange p-4 text-center">
+                    <h5>ديون الموردين</h5>
+                    <div class="h2 fw-bold my-2">4,000 ج.م</div>
+                </div>
             </div>
-            <div class="card bg-green">
-                <h3>📦 أصناف المخزن</h3>
-                <div class="amount">6 أصناف</div>
-                <p>جرد آلي وتنبيه ذكي بالنواقص</p>
+            <div class="col-md-3 col-sm-6">
+                <div class="card card-stat bg-custom-green p-4 text-center">
+                    <h5>أصناف المخزن</h5>
+                    <div class="h2 fw-bold my-2">6 أصناف</div>
+                </div>
             </div>
         </div>
 
-        <div class="screenshots">
-            <img src="التقارير.png" alt="واجهة التقارير">
-            <img src="كشف حساب.png" alt="حسابات العملاء">
-        </div>
-
-        <!-- Contact Section -->
-        <div class="contact-section">
-            <h2>هل تبحث عن حل تقني مخصص؟</h2>
-            <p>سواء كنت تحتاج لتركيب شبكات، إعداد سيرفرات، أو بناء نظام محاسبي متكامل، نحن هنا لخدمتك.</p>
-            <br>
-            <a href="mailto:mohamed.mahmoud66@gmail.com" class="cta-button">تواصل مع المطور الآن</a>
-            <p style="margin-top: 15px; color: #7f8c8d;">mohamed.mahmoud66@gmail.com</p>
+        <div class="row mt-5">
+            <div class="col-md-6"><img src="التقارير.png" class="screenshot-img" alt="Reports"></div>
+            <div class="col-md-6"><img src="كشف حساب.png" class="screenshot-img" alt="Statements"></div>
         </div>
     </div>
 
+    <!-- Contact & Footer -->
+    <footer class="footer text-center">
+        <div class="container">
+            <h2 class="mb-4">جاهز لبدء مشروعك القادم؟</h2>
+            <p class="mb-5">نقدم حلولاً برمجية مخصصة تناسب احتياجات أعمالكم بأعلى معايير الدقة.</p>
+            <a href="mailto:mohamed.mahmoud66@gmail.com" class="cta-btn">تواصل معنا الآن</a>
+            <div class="mt-5 pt-4 border-top border-secondary">
+                <p>© 2026 M.Store Software Solutions - المهندس محمد محمود</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
