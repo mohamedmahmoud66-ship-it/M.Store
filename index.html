@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>M.Store - حلول البرمجيات المتكاملة</title>
+    <title>M.Store - حلول البرمجيات المتكاملة والـ IT</title>
     <style>
         body { margin: 0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #f4f7f6; color: #333; }
         .hero { background: linear-gradient(rgba(44, 62, 80, 0.9), rgba(44, 62, 80, 0.9)), url('https://images.unsplash.com/photo-1510511459019-5dda7724fd87?auto=format&fit=crop&q=80&w=1000'); background-size: cover; color: white; padding: 60px 20px; text-align: center; }
@@ -19,13 +19,14 @@
         .bg-orange { background: linear-gradient(135deg, #f39c12, #e67e22); }
         .bg-green { background: linear-gradient(135deg, #27ae60, #2ecc71); }
 
-        /* Experience & Portfolio Section */
+        /* Experience & Projects Section */
         .section-title { color: #2c3e50; border-right: 5px solid #3498db; padding-right: 15px; margin-top: 60px; text-align: right; }
-        .experience-item { background: white; padding: 25px; border-radius: 10px; margin-bottom: 20px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); border-right: 4px solid #3498db; }
-        .experience-item h3 { margin: 0; color: #2c3e50; }
-        .experience-item .date { color: #3498db; font-weight: bold; font-size: 0.9rem; }
-        .experience-item ul { padding-right: 20px; margin-top: 10px; }
-        .experience-item li { margin-bottom: 8px; line-height: 1.6; }
+        .item-box { background: white; padding: 25px; border-radius: 10px; margin-bottom: 20px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); border-right: 4px solid #3498db; }
+        .item-box h3 { margin: 0; color: #2c3e50; }
+        .item-box .tag { display: inline-block; background: #ebf5fb; color: #3498db; padding: 2px 10px; border-radius: 5px; font-size: 0.85rem; font-weight: bold; margin-bottom: 10px; }
+        .item-box .date { color: #7f8c8d; font-weight: bold; font-size: 0.9rem; float: left; }
+        .item-box ul { padding-right: 20px; margin-top: 10px; }
+        .item-box li { margin-bottom: 8px; line-height: 1.6; }
 
         .screenshots { margin-top: 50px; text-align: center; }
         .screenshots img { width: 100%; max-width: 800px; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.2); margin-bottom: 20px; border: 5px solid white; }
@@ -39,10 +40,55 @@
 
     <div class="hero">
         <h1>M.Store System 📦</h1>
-        <p style="font-size: 1.2rem; opacity: 0.9;">أكثر من 25 عاماً من الخبرة في بناء الحلول التقنية المخصصة</p>
+        <p style="font-size: 1.2rem; opacity: 0.9;">خبير برمجيات وIT بأكثر من 25 عاماً من الخبرة في بناء الحلول الذكية</p>
     </div>
 
     <div class="container">
+        <!-- New Projects Section -->
+        <h2 class="section-title">💻 أحدث المشروعات البرمجية</h2>
+        
+        <div class="item-box">
+            <span class="tag">Web Development | ASP.NET & SQL</span>
+            <h3>نظام WareHouseDB المتكامل</h3>
+            <ul>
+                <li>تطوير نظام ERP شامل لإدارة المبيعات والمشتريات والمخازن المتعددة.</li>
+                <li>تصميم وتنفيذ موديول "شؤون العاملين" لمتابعة الرواتب والحضور والانصراف بدقة.</li>
+                <li>ضمان سلامة البيانات (Data Integrity) عبر استخدام SQL Transactions المتقدمة.</li>
+            </ul>
+        </div>
+
+        <div class="item-box">
+            <span class="tag">Mobile Development | Kotlin & Android</span>
+            <h3>تطبيق PhotoEditor الاحترافي</h3>
+            <ul>
+                <li>تطوير تطبيق Native لنظام أندرويد باستخدام لغة **Kotlin** لتحرير ومعالجة الصور.</li>
+                <li>تكامل النظام مع MediaStore لضمان حفظ وإدارة الصور بكفاءة عالية.</li>
+            </ul>
+        </div>
+
+        <!-- Experience Section -->
+        <h2 class="section-title">🚀 المسيرة المهنية (Portfolio)</h2>
+        
+        <div class="item-box">
+            <span class="date">2010 – 2022</span>
+            <h3>IT Specialist & Software Developer | Cairo Medical</h3>
+            <ul>
+                <li>تأسيس وتركيب الشبكات (Networking) وإعداد السيرفرات الخاصة بالمستشفيات والشركات.</li>
+                <li>برمجة أدوات مخصصة لأتمتة السجلات الطبية باستخدام **C#** و **Java**.</li>
+                <li>دمج وإدارة أنظمة البصمة ZKTeco وربطها بقواعد البيانات لضبط الحضور والانصراف.</li>
+            </ul>
+        </div>
+
+        <div class="item-box">
+            <span class="date">2000 – 2010</span>
+            <h3>Software Programmer | Delta Computer</h3>
+            <ul>
+                <li>تطوير برامج الحسابات والمخازن المخصصة للشركات الكبرى.</li>
+                <li>تصميم معماري لقواعد البيانات (Database Architecture) لضمان سرعة التقارير المالية.</li>
+            </ul>
+        </div>
+
+        <!-- Dashboard Section -->
         <h2 class="section-title">📊 معاينة نظام M.Store</h2>
         <div class="dashboard-grid">
             <div class="card bg-blue">
@@ -58,46 +104,24 @@
             <div class="card bg-orange">
                 <h3>🟠 ديون الموردين</h3>
                 <div class="amount">4,000 ج.م</div>
-                <p>تنظيم حسابات التجار والمواد الخام</p>
+                <p>تنظيم حسابات الموردين والمواد الخام</p>
             </div>
             <div class="card bg-green">
                 <h3>📦 أصناف المخزن</h3>
                 <div class="amount">6 أصناف</div>
-                <p>جرد آلي وتنبيه بالنواقص</p>
+                <p>جرد آلي وتنبيه ذكي بالنواقص</p>
             </div>
         </div>
 
-        <h2 class="section-title">🚀 الخبرات السابقة (Portfolio)</h2>
-        
-        <div class="experience-item">
-            <h3>Senior IT Specialist & Software Developer | Cairo Medical</h3>
-            <span class="date">2010 – 2022 (12 سنة)</span>
-            <ul>
-                <li>تطوير أدوات برمجية مخصصة لأتمتة السجلات الطبية وتحسين سير العمل الرقمي.</li>
-                <li>إدارة البنية التحتية لتكنولوجيا المعلومات وضمان استمرارية العمل بنسبة 99.9%.</li>
-                <li>دمج وإدارة أنظمة البصمة ZKTeco وربطها بقواعد البيانات الداخلية.</li>
-            </ul>
-        </div>
-
-        <div class="experience-item">
-            <h3>Software Programmer | Delta Computer</h3>
-            <span class="date">2000 – 2010 (10 سنوات)</span>
-            <ul>
-                <li>تطوير برامج محاسبة ومخازن قوية لعملاء الشركات الكبرى.</li>
-                <li>تصميم قواعد بيانات SQL معقدة لضمان سلامة البيانات والتقارير المالية.</li>
-                <li>تقديم الدعم الفني المتقدم وتصحيح أخطاء الأنظمة البرمجية.</li>
-            </ul>
-        </div>
-
         <div class="screenshots">
-            <h2 class="section-title" style="text-align: center; border: none;">🖼️ لقطات من أعمالنا</h2>
             <img src="التقارير.png" alt="واجهة التقارير">
             <img src="كشف حساب.png" alt="حسابات العملاء">
         </div>
 
+        <!-- Contact Section -->
         <div class="contact-section">
-            <h2>ابدأ رحلة التحول الرقمي لمصنعك اليوم</h2>
-            <p>سواء كنت بحاجة لنظام ERP متكامل أو تطبيق موبايل، خبرتنا في خدمتك.</p>
+            <h2>هل تبحث عن حل تقني مخصص؟</h2>
+            <p>سواء كنت تحتاج لتركيب شبكات، إعداد سيرفرات، أو بناء نظام محاسبي متكامل، نحن هنا لخدمتك.</p>
             <br>
             <a href="mailto:mohamed.mahmoud66@gmail.com" class="cta-button">تواصل مع المطور الآن</a>
             <p style="margin-top: 15px; color: #7f8c8d;">mohamed.mahmoud66@gmail.com</p>
