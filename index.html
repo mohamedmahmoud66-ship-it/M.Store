@@ -3,56 +3,63 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>M.Store - نظام إدارة مصنع </title>
+    <title>M.Store - حلول البرمجيات المتكاملة</title>
     <style>
-        body { margin: 0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #f4f7f6; }
-        .hero { background: #2c3e50; color: white; padding: 40px 20px; text-align: center; }
-        .reports-container { direction: rtl; padding: 40px 20px; max-width: 1200px; margin: auto; }
+        body { margin: 0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #f4f7f6; color: #333; }
+        .hero { background: linear-gradient(rgba(44, 62, 80, 0.9), rgba(44, 62, 80, 0.9)), url('https://images.unsplash.com/photo-1510511459019-5dda7724fd87?auto=format&fit=crop&q=80&w=1000'); background-size: cover; color: white; padding: 60px 20px; text-align: center; }
+        .container { direction: rtl; padding: 40px 20px; max-width: 1200px; margin: auto; }
+        
+        /* Dashboard Section */
         .dashboard-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; margin-top: 20px; }
         .card { padding: 30px; border-radius: 15px; color: white; box-shadow: 0 10px 20px rgba(0,0,0,0.1); text-align: center; transition: transform 0.3s; }
         .card:hover { transform: translateY(-10px); }
-        .card h3 { margin-top: 0; font-size: 1.2rem; opacity: 0.9; }
-        .card .amount { font-size: 2.5rem; font-weight: bold; margin: 15px 0; }
+        .card .amount { font-size: 2.2rem; font-weight: bold; margin: 15px 0; }
         .bg-blue { background: linear-gradient(135deg, #3498db, #2980b9); }
         .bg-red { background: linear-gradient(135deg, #e74c3c, #c0392b); }
         .bg-orange { background: linear-gradient(135deg, #f39c12, #e67e22); }
         .bg-green { background: linear-gradient(135deg, #27ae60, #2ecc71); }
+
+        /* Experience & Portfolio Section */
+        .section-title { color: #2c3e50; border-right: 5px solid #3498db; padding-right: 15px; margin-top: 60px; text-align: right; }
+        .experience-item { background: white; padding: 25px; border-radius: 10px; margin-bottom: 20px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); border-right: 4px solid #3498db; }
+        .experience-item h3 { margin: 0; color: #2c3e50; }
+        .experience-item .date { color: #3498db; font-weight: bold; font-size: 0.9rem; }
+        .experience-item ul { padding-right: 20px; margin-top: 10px; }
+        .experience-item li { margin-bottom: 8px; line-height: 1.6; }
+
         .screenshots { margin-top: 50px; text-align: center; }
         .screenshots img { width: 100%; max-width: 800px; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.2); margin-bottom: 20px; border: 5px solid white; }
-        .contact-section { text-align: center; margin-top: 50px; padding: 40px; background: white; border-radius: 15px; border-top: 5px solid #2c3e50; }
-        .cta-button { background: #2c3e50; color: white; padding: 15px 30px; text-decoration: none; border-radius: 5px; font-weight: bold; font-size: 1.2rem; display: inline-block; }
-        .cta-button:hover { background: #34495e; }
+        
+        .contact-section { text-align: center; margin-top: 60px; padding: 60px 40px; background: #fff; border-radius: 15px; box-shadow: 0 -5px 20px rgba(0,0,0,0.05); }
+        .cta-button { background: #2c3e50; color: white; padding: 18px 40px; text-decoration: none; border-radius: 30px; font-weight: bold; font-size: 1.3rem; display: inline-block; transition: 0.3s; }
+        .cta-button:hover { background: #3498db; transform: scale(1.05); }
     </style>
 </head>
 <body>
 
     <div class="hero">
         <h1>M.Store System 📦</h1>
-        <p>الحل المتكامل لإدارة حسابات ومخازن مصنع</p>
+        <p style="font-size: 1.2rem; opacity: 0.9;">أكثر من 25 عاماً من الخبرة في بناء الحلول التقنية المخصصة</p>
     </div>
 
-    <div class="reports-container">
-        <h2 style="color:#2c3e50; border-bottom: 3px solid #3498db; padding-bottom: 10px; text-align: center;">📊 معاينة من داخل النظام (ملخص الأداء)</h2>
-        
+    <div class="container">
+        <h2 class="section-title">📊 معاينة نظام M.Store</h2>
         <div class="dashboard-grid">
             <div class="card bg-blue">
                 <h3>💰 إجمالي المبيعات</h3>
                 <div class="amount">53,340 ج.م</div>
                 <p>متابعة لحظية لكل المبيعات</p>
             </div>
-
             <div class="card bg-red">
                 <h3>🔴 ديون العملاء</h3>
                 <div class="amount">100- ج.م</div>
                 <p>تحصيل دقيق للمديونيات الخارجية</p>
             </div>
-
             <div class="card bg-orange">
                 <h3>🟠 ديون الموردين</h3>
                 <div class="amount">4,000 ج.م</div>
                 <p>تنظيم حسابات التجار والمواد الخام</p>
             </div>
-
             <div class="card bg-green">
                 <h3>📦 أصناف المخزن</h3>
                 <div class="amount">6 أصناف</div>
@@ -60,18 +67,40 @@
             </div>
         </div>
 
+        <h2 class="section-title">🚀 الخبرات السابقة (Portfolio)</h2>
+        
+        <div class="experience-item">
+            <h3>Senior IT Specialist & Software Developer | Cairo Medical</h3>
+            <span class="date">2010 – 2022 (12 سنة)</span>
+            <ul>
+                <li>تطوير أدوات برمجية مخصصة لأتمتة السجلات الطبية وتحسين سير العمل الرقمي.</li>
+                <li>إدارة البنية التحتية لتكنولوجيا المعلومات وضمان استمرارية العمل بنسبة 99.9%.</li>
+                <li>دمج وإدارة أنظمة البصمة ZKTeco وربطها بقواعد البيانات الداخلية.</li>
+            </ul>
+        </div>
+
+        <div class="experience-item">
+            <h3>Software Programmer | Delta Computer</h3>
+            <span class="date">2000 – 2010 (10 سنوات)</span>
+            <ul>
+                <li>تطوير برامج محاسبة ومخازن قوية لعملاء الشركات الكبرى.</li>
+                <li>تصميم قواعد بيانات SQL معقدة لضمان سلامة البيانات والتقارير المالية.</li>
+                <li>تقديم الدعم الفني المتقدم وتصحيح أخطاء الأنظمة البرمجية.</li>
+            </ul>
+        </div>
+
         <div class="screenshots">
-            <h2 style="color:#2c3e50; margin-bottom: 30px;">🖼️ صور من البرنامج</h2>
+            <h2 class="section-title" style="text-align: center; border: none;">🖼️ لقطات من أعمالنا</h2>
             <img src="التقارير.png" alt="واجهة التقارير">
             <img src="كشف حساب.png" alt="حسابات العملاء">
         </div>
 
         <div class="contact-section">
-            <h2>هل تريد تجربة النظام في مصنعك؟</h2>
-            <p>برنامج M.Store مصمم ليوفر لك الوقت ويحمي أموالك من خلال نظام محاسبي دقيق.</p>
+            <h2>ابدأ رحلة التحول الرقمي لمصنعك اليوم</h2>
+            <p>سواء كنت بحاجة لنظام ERP متكامل أو تطبيق موبايل، خبرتنا في خدمتك.</p>
             <br>
-           <a href="mailto:mohamed.mahmoud66@gmail.com" class="cta-button">تواصل مع المطور </a>
-            <p>mohamed.mahmoud66@gmail.com</p>
+            <a href="mailto:mohamed.mahmoud66@gmail.com" class="cta-button">تواصل مع المطور الآن</a>
+            <p style="margin-top: 15px; color: #7f8c8d;">mohamed.mahmoud66@gmail.com</p>
         </div>
     </div>
 
